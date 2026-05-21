@@ -216,15 +216,19 @@
         // EXACT LEVEL 1 LAYOUT
         function initLevel() {
             shapes = [
-                // Shape 1: The L-Shape (Starts left, goes down, turns right)
-                new Shape([{x: 120, y: 200}, {x: 120, y: 320}, {x: 280, y: 320}]), 
-                // Shape 2: The Vertical line (Starts top, goes straight down)
-                new Shape([{x: 200, y: 150}, {x: 200, y: 380}]) 
+                // Shape 1: Starts bottom-left, goes up, turns RIGHT.
+                new Shape([{x: 120, y: 320}, {x: 120, y: 150}, {x: 250, y: 150}]), 
+                
+                // Shape 2: Starts top-middle, goes down, turns LEFT.
+                new Shape([{x: 200, y: 100}, {x: 200, y: 260}, {x: 80, y: 260}]),
+
+                // Shape 3: Straight line on the right, pointing straight DOWN.
+                new Shape([{x: 320, y: 100}, {x: 320, y: 380}]) 
             ];
             
-            // Set initial hearts UI
+            // Set initial hearts UI and Level text
             heartsDisplay.innerHTML = "💜💜💜💜💜";
-            document.getElementById('level-text').innerText = "Level 1";
+            document.getElementById('level-text').innerText = "Level 2";
         }
 
         // Click detection logic
